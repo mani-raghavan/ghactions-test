@@ -10,4 +10,9 @@ jobs:
         run: |
           node -v
           npm -v
-          
+          pip -v
+      - name: python cmd
+        run: |
+          import platform
+          print (platform.processor())    
+        shell: python
