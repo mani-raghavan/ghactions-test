@@ -9,7 +9,7 @@ jobs:
       - name: List Files
         run: |
           pwd
-          ls -a
+          ls -altr
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
@@ -19,7 +19,7 @@ jobs:
       - name: After Check List Files
         run: |
           pwd
-          ls -a
+          ls -altr
       - name: JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
