@@ -2,7 +2,7 @@ name: Test Scheduler Alone
 
 on: 
   schedule:
-    - cron: '0/5 * * * *'
+  - cron: '0/5 * * * *'
 
 jobs:
   run-github-actions:
