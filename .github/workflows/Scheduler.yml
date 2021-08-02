@@ -1,31 +1,13 @@
-name: Test Actions
+name: Test Scheduler Alone
 
 on: 
   schedule:
-    - cron: '0/5 * * * *'
+  - cron: '0/5 * * * *'
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files
-        run: |
-          pwd
-          ls -altr
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-          echo "{{github.token}}"
-      - name: Checkout
-        uses: actions/checkout@v2.3.4
-      - name: After Check List Files
-        run: |
-          pwd
-          ls -altr
-      - name: JS Action
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: Mani
-      - name: Greeting Time
-        run: echo "${{steps.greet.outputs.time}}"   
+      - name: "Hello World"
+        run: echo "Hello World Repeat 5 Secs"
+

@@ -1,8 +1,11 @@
 name: Test Actions
 
-on: 
-  schedule:
-    - cron: '0/5 * * * *'
+on:
+  repository_dispatch:
+    types: [build]
+
+ ## schedule:
+    ##- cron: '0/5 * * * *'
  ## push:
   pull_request:
     types: [closed, assigned, opened, reopened]
